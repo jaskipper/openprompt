@@ -90,6 +90,13 @@ function toggleMirror(evt) {
   evt.stopPropagation();
 }
 
+function promptFullScreen() {
+  var x;
+   if (confirm("Do You Want to use Full Screen Mode?") == true) {
+       toggleFullScreen();
+   }
+}
+
 
 /* bind keyboard events */
 
@@ -185,7 +192,7 @@ $flipButton.click(function(e) {
 */
 $('body').click(function() {
   if ( ! isBeingEdited && ! isPlaying) {
-   toggleFullScreen();
+   promptFullScreen();
   }
 });
 
